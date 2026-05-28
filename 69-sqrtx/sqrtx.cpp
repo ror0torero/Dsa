@@ -1,17 +1,17 @@
 class Solution {
 public:
     int mySqrt(int x) {
-        long long int a=0,b=1;
-        long long int res1,res2;
-        for(int i=0;i<x;i++){
-            res1=a*a;
-            res2=b*b;
-            if(res2>x && res1<=x) break;
-            else{
-                a++;
-                b++;
-            }
+        if(x==0 || x==1) return x;
+        int low=0;
+        int high=x;
+        long long mid=-1,square;
+        while(low<=high){
+            mid=(low+high)/2;
+            square=mid*mid;
+            if(square>x) high=mid-1;
+            else if (square==x) return mid;
+            else low = mid+1;
         }
-        return a;
+        return high;
     }
 };
