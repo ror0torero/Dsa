@@ -15,8 +15,9 @@ public:
         int mid;
         while(low<=high){
             mid=low +(high-low)/2;
-            if(guess(mid)==0) break;
-            else if(guess(mid)==1) low=mid+1;
+            int res=guess(mid);
+            if(res==0) break;
+            else if(res==1) low=mid+1;
             else high=mid-1;
         }
         return mid;
