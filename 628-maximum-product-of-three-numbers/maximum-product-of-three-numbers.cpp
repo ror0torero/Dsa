@@ -7,7 +7,7 @@ public:
         for(int i=0;i<3;i++){
             pp=pp*nums[n-1-i];
         }
-        int np=pp-1;
+        int np=INT_MIN;
         if(nums[0]<0 &&nums[1]<0 &&nums[n-1]>=0){
             np=nums[0]*nums[1]*nums[n-1];
         }
