@@ -14,7 +14,6 @@ public:
                 res+=a;
                 res+=s[i];
                 flag=true;
-                cout<<res<<'*'<<endl;
                 a="";
                 }
             i--;
