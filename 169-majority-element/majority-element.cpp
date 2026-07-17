@@ -1,13 +1,17 @@
 class Solution {
 public:
     int majorityElement(vector<int>& nums) {
-        int major=nums[0];
-        int count=0;
-        for(auto it:nums){
-            if(major==it) count++;
-            else count--;
-            if(count==0){major=it; count++;}
+        int num=nums[0];
+        int n=nums.size();
+        int cnt=1;
+        for(int i=1;i<n;i++){
+            if(nums[i]!=num && cnt<=1) num=nums[i];
+            else if(nums[i]!=num) cnt--;
+            else{
+                cnt++;
+            } 
+            cout<<num<<" "<<cnt<<endl;
         }
-        return major;
+        return num;
     }
 };
