@@ -10,7 +10,6 @@ public:
             else{
                 cnt++;
             } 
-            cout<<num<<" "<<cnt<<endl;
         }
         return num;
     }
