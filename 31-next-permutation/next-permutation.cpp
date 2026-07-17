@@ -10,9 +10,7 @@ public:
         }
         if (i==0) {reverse(nums.begin(),nums.end()); return;}
         i-=1;
-        cout<<i<<endl;
         int pivot=nums[i];
-        cout<<pivot;
         int succ=INT_MAX;
         int succi=-1;
         //finding succesor
@@ -25,7 +23,6 @@ public:
                 }
             }
         }
-        cout<<i<<endl<<succi;
         swap(nums[i],nums[succi]);
         reverse(nums.begin()+i+1,nums.end());
     }
