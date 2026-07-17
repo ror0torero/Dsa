@@ -2,17 +2,13 @@ class Solution {
 public:
     vector<int> rearrangeArray(vector<int>& nums) {
         int n=nums.size();
-        vector<int>ps;
-        vector<int>ne;
+        vector<int> res(n);
+        int pos=0;
+        int ne=1;
         for(auto it:nums){
-            if(it>0) ps.push_back(it);
-            else ne.push_back(it);
+            if(it>0){res[pos]=it; pos+=2;}
+            else {res[ne]=it; ne+=2;}
         }
-        nums.clear();
-        for(int i=0;i<n/2;i++){
-            nums.push_back(ps[i]);
-            nums.push_back(ne[i]);
-        }
-        return nums;
+        return res;
     }
 };
