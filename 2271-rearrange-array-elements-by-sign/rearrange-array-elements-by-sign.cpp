@@ -13,7 +13,6 @@ public:
             nums.push_back(ps[i]);
             nums.push_back(ne[i]);
         }
-        // delete ps,ne;
         return nums;
     }
 };
