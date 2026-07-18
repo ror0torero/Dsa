@@ -7,8 +7,9 @@ public:
         int mx=1;
         for(int i=1;i<nums.size();i++){
             if(nums[i]==nums[i-1]+1) {cnt++;mx=max(mx,cnt);}
-            else
-                if(nums[i]!=nums[i-1]) cnt=1;
+            else if(nums[i]==nums[i-1]){}
+            else 
+            cnt=1;
         }
         return mx;
     }
