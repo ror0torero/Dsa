@@ -9,9 +9,7 @@ public:
         ans.push_back(1);
         else{
         p*=(rowIndex-c+1);
-        cout<<p<<endl;
         p/=c;
-        cout<<p<<endl;
         ans.push_back(p);
         }
     }
