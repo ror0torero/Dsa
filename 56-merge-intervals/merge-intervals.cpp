@@ -19,7 +19,7 @@ public:
                 merge=true;
                 m=max(m,intervals[j][1]);
                 j++;
-                while(j<n && m>=intervals[j][0]){
+                while(j<n && m>=intervals[j][0] &&merge){
                 m=max(m,intervals[j][1]);
                 j++;
                 }
