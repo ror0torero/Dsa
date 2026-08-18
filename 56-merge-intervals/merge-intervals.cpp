@@ -22,7 +22,6 @@ public:
                 while(j<n && m>=intervals[j][0]){
                 m=max(m,intervals[j][1]);
                 j++;
-                cout<<i<<" "<<j<<endl;
                 }
             }
             if(merge){
@@ -33,10 +32,8 @@ public:
                 merge=false;
                 i=j;
                 j=i+1;
-                cout<<i<<" "<<j<<endl;
             }
             else{
-                cout<<i<<" "<<j<<endl;
                 res.push_back(intervals[i]);
                 i++;
                 j=i+1;
